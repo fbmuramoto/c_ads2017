@@ -1,19 +1,32 @@
 #include <stdio.h>
 
 //Define tipo lógico	
-/*
-true: valor inteiro 1
-false: valor inteiro 0
-*/
 
+/*
+Valores lógicos para Verdadeiro (V) e Falso (F):
+• true: valor inteiro 1
+• false: valor inteiro 0
+
+► Código:
+-----
 enum boolean {
 	true = 1,
 	false = 0
 	};
 
 typedef enum boolean bool; //determina nome da variável do tipo lógico
+-----
 
-int main() {//int substitui void, pois no mac não funciona void...
+C não tem tipo lógico. Pode ser definido pela declaração a seguir:
+► Código:
+-----
+#define BOOL char
+#define FALSE 0
+#define TRUE 1
+-----
+*/
+
+int main() {//int substitui void, pois no MacOSX não funciona void...
 
 //Meu primeiro programa em C
 	printf("Meu primeiro programa em C! \n");	
